@@ -1,5 +1,6 @@
 const COLORS = {
   appPrimary: '#F1521F',
+  appPrimaryLight: '#FDEBE4',
   appBG: '#F3F5F7',
 
   white: '#FFFFFF',

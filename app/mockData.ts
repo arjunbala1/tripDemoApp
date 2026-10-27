@@ -40,3 +40,36 @@ export const MOCKDATA: mockDataProps[] = [
 
 ]
 
+
+
+export const TRAVEL_MODES = ['Drive', 'Ride', 'Walk'] as const;
+export type TravelMode = (typeof TRAVEL_MODES)[number];
+
+export const ROUTE_SUMMARY = {
+    duration: '24 min',
+    distance: '9.6 km',
+    arrival: '10:42',
+    alert: 'Heavy traffic near the marina',
+};
+
+export interface routeStepProps {
+    id: number;
+    title: string;
+    subtitle: string;
+    distance: string;
+}
+
+export const ROUTE_STEPS: routeStepProps[] = [
+    {
+        id: 1,
+        title: 'Head north on Street 840',
+        subtitle: 'Keep right past the service road',
+        distance: '450 m',
+    },
+    {
+        id: 2,
+        title: 'Turn right onto Al Istiqlal St',
+        subtitle: 'Moderate traffic near the roundabout',
+        distance: '1.8 km',
+    },
+];

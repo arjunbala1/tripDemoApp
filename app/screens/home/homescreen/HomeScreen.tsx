@@ -47,6 +47,10 @@ function HomeScreen({ navigation }: Props) {
   const onFooterAction = () => {
     console.log('Footer button pressed');
   };
+  const onNext = () => {
+    navigation.navigate('RoutePreview', { pickup, dropoff });
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="dark-content" />
@@ -93,7 +97,7 @@ function HomeScreen({ navigation }: Props) {
           )}
         />
       </View>
-      <FooterButton disabled={!pickup || !dropoff} title={'Next'} onPress={onFooterAction} />
+      <FooterButton disabled={!pickup || !dropoff} title={'Next'} onPress={onNext} />
     </SafeAreaView>
   );
 }
