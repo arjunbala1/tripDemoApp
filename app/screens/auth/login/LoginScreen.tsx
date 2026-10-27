@@ -47,12 +47,11 @@ function LoginScreen({ navigation }: Props) {
   };
 
   const onFooterAction = () => {
-    // Run both so every error shows at once.
-    // const isEmailValid = validateEmail(email);
-    // const isPasswordValid = validatePassword(password);
-    // if (!isEmailValid || !isPasswordValid) {
-    //   return;
-    // }
+    const isEmailValid = validateEmail(email);
+    const isPasswordValid = validatePassword(password);
+    if (!isEmailValid || !isPasswordValid) {
+      return;
+    }
     navigation.replace('HomeStack');
     // Placeholder action for the footer button.
     console.log('Footer button pressed');
