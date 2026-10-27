@@ -1,8 +1,8 @@
 import { StyleSheet } from 'react-native';
-import colors from '../../utilities/colors';
-import Constants from '../../utilities/constants';
-import { widthInPercent } from '../../utilities/helpers';
-import COLORS from '../../utilities/colors';
+import colors from '../../../utilities/colors';
+import Constants from '../../../utilities/constants';
+import { widthInPercent } from '../../../utilities/helpers';
+import COLORS from '../../../utilities/colors';
 
 const styles = StyleSheet.create({
     container: {

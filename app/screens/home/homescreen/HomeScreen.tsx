@@ -2,20 +2,20 @@ import { useState } from 'react';
 import { FlatList, Image, StatusBar, View } from 'react-native';
 import type { CompositeScreenProps } from '@react-navigation/native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import type { HomeStackParamList } from '../../utilities/navigation/HomeNavigator';
-import type { RootStackParamList } from '../../utilities/navigation/RootNavigator';
-import colors from '../../utilities/colors';
-import FooterButton from '../../components/footerButton/FooterButton';
+import type { HomeStackParamList } from '../../../utilities/navigation/HomeNavigator';
+import type { RootStackParamList } from '../../../utilities/navigation/RootNavigator';
+import colors from '../../../utilities/colors';
+import FooterButton from '../../../components/footerButton/FooterButton';
 import styles from './Styles';
-import HeaderComponent from '../../components/headerComponent/HeaderComponent';
-import CustomText from '../../components/customText/CustomText';
+import HeaderComponent from '../../../components/headerComponent/HeaderComponent';
+import CustomText from '../../../components/customText/CustomText';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import LocationSearchBox from '../../templates/locationSearchBox/LocationSearchBox';
-import AppButton from '../../components/appButton/AppButton';
-import ICONS from '../../utilities/Images';
+import LocationSearchBox from '../../../templates/locationSearchBox/LocationSearchBox';
+import AppButton from '../../../components/appButton/AppButton';
+import ICONS from '../../../utilities/Images';
 
-import { MOCKDATA, mockDataProps } from '../../mockData';
-import AlertCard from '../../components/alertCard/AlertCard';
+import { MOCKDATA, mockDataProps } from '../../../mockData';
+import AlertCard from '../../../components/alertCard/AlertCard';
 
 type Props = CompositeScreenProps<
   NativeStackScreenProps<HomeStackParamList, 'Home'>,
