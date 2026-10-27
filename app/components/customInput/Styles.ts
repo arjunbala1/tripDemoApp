@@ -16,6 +16,12 @@ const styles = StyleSheet.create({
         color: COLORS.appText,
         backgroundColor: COLORS.white,
 	},
+	inputBorderless: {
+		borderWidth: 0,
+		borderRadius: 0,
+		padding: 0,
+		backgroundColor: 'transparent',
+	},
 	inputError: {
 		borderColor: '#D32F2F',
 	},

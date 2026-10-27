@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Image, StyleSheet, Text, View } from 'react-native';
+import { Image, KeyboardAvoidingView, Platform, ScrollView, View } from 'react-native';
 import type { CompositeScreenProps } from '@react-navigation/native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { AuthStackParamList } from '../../../utilities/navigation/AuthNavigator';
@@ -48,23 +48,32 @@ function LoginScreen({ navigation }: Props) {
 
   const onFooterAction = () => {
     // Run both so every error shows at once.
-    const isEmailValid = validateEmail(email);
-    const isPasswordValid = validatePassword(password);
-    if (!isEmailValid || !isPasswordValid) {
-      return;
-    }
+    // const isEmailValid = validateEmail(email);
+    // const isPasswordValid = validatePassword(password);
+    // if (!isEmailValid || !isPasswordValid) {
+    //   return;
+    // }
     navigation.replace('HomeStack');
     // Placeholder action for the footer button.
     console.log('Footer button pressed');
   }
   return (
-    <SafeAreaView edges={['bottom', 'top']} style={styles.container}>
-      <View style={styles.contentContainer}>
+    <SafeAreaView edges={['top']} style={styles.container}>
+      <KeyboardAvoidingView
+        style={styles.keyboardAvoidingView}
+        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+      >
+      <ScrollView
+        style={styles.scrollView}
+        contentContainerStyle={styles.contentContainer}
+        keyboardShouldPersistTaps="handled"
+        showsVerticalScrollIndicator={false}
+      >
         <Image
           source={ICONS.APP_ICON}
           style={styles.logo}
         />
-        <CustomText text="Welcome back" variant="largeBold" style={styles.title} />
+        <CustomText text="Welcome back" variant="extraLargeBold" style={styles.title} />
         <CustomText text="Log in to plan a trip and follow your route turn by turn." />
         <CustomInput
           title="Email"
@@ -92,7 +101,7 @@ function LoginScreen({ navigation }: Props) {
           onBlur={() => validatePassword(password)}
         />
         <CustomText color={colors.appPrimary} text="Forgot your password?" variant='mediumBold' onPress={() => navigation.navigate('ForgotPassword')} />
-      </View>
+      </ScrollView>
       <FooterButton
         title={'Log In'}
         onPress={onFooterAction}
@@ -103,6 +112,7 @@ function LoginScreen({ navigation }: Props) {
           </View>
         }
       />
+      </KeyboardAvoidingView>
 
     </SafeAreaView>
   );

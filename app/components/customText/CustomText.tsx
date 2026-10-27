@@ -4,17 +4,19 @@ export type CustomTextVariant =
 	| 'large'
 	| 'medium'
 	| 'small'
+    | 'extraLargeBold'
 	| 'largeBold'
 	| 'mediumBold'
 	| 'smallBold';
 
-const variantStyles: Record<CustomTextVariant, TextStyle> = {
+export const variantStyles: Record<CustomTextVariant, TextStyle> = {
 	large: { fontSize: 20, fontWeight: '400' },
-	medium: { fontSize: 16, fontWeight: '400' },
+	medium: { fontSize: 14, fontWeight: '400' },
 	small: { fontSize: 12, fontWeight: '400' },
-	largeBold: { fontSize: 20, fontWeight: '800' },
-	mediumBold: { fontSize: 16, fontWeight: '800' },
-	smallBold: { fontSize: 12, fontWeight: '800' },
+    extraLargeBold: { fontSize: 26, fontWeight: '900' },
+	largeBold: { fontSize: 22, fontWeight: '900' },
+	mediumBold: { fontSize: 14, fontWeight: '900' },
+	smallBold: { fontSize: 12, fontWeight: '900' },
 };
 
 type CustomTextProps = TextProps & {

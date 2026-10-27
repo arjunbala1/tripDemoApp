@@ -7,10 +7,17 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.appBG,
-    padding: Constants.APP_PADDING,
+  },
+  keyboardAvoidingView: {
+    flex: 1,
+  },
+  scrollView: {
+    flex: 1,
   },
   contentContainer: {
-    marginTop: widthInPercent(10),
+    flexGrow: 1,
+    paddingHorizontal: Constants.APP_PADDING,
+    paddingTop: widthInPercent(10),
     gap: Constants.APP_PADDING,
   },
   logo: {

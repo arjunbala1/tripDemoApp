@@ -4,6 +4,7 @@ const COLORS = {
 
   white: '#FFFFFF',
   appText: '#111F2C',
+  appTextDarkGrey: '#7C8B99',
   appTextGrey: '#9CA3AF',
   borderColor: '#E6EBEF',
 
