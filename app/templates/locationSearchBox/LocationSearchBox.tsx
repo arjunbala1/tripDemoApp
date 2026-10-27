@@ -40,9 +40,11 @@ const LocationSearchBox = ({
                     placeholder='Choose a starting point'
                     style={GlobalStyles.flex}
                 />
-                <Pressable onPress={() => onPickupChange('')} style={styles.clearButtonContainer}>
-                    <Image resizeMode='contain' source={ICONS.CLOSE} style={styles.clearButton} />
-                </Pressable>
+                {pickup.length > 0 && (
+                    <Pressable onPress={() => onPickupChange('')} style={styles.clearButtonContainer}>
+                        <Image resizeMode='contain' source={ICONS.CLOSE} style={styles.clearButton} />
+                    </Pressable>
+                )}
             </View>
             <View style={styles.divider} />
             <View style={styles.fieldRow}>
@@ -56,9 +58,11 @@ const LocationSearchBox = ({
                     placeholder='Choose a destination'
                     style={GlobalStyles.flex}
                 />
-                <Pressable onPress={() => onDropoffChange('')} style={styles.clearButtonContainer}>
-                    <Image resizeMode='contain' source={ICONS.CLOSE} style={styles.clearButton} />
-                </Pressable>
+                {dropoff.length > 0 && (
+                    <Pressable onPress={() => onDropoffChange('')} style={styles.clearButtonContainer}>
+                        <Image resizeMode='contain' source={ICONS.CLOSE} style={styles.clearButton} />
+                    </Pressable>
+                )}
             </View>
         </View>
         <Pressable onPress={onSwap} style={styles.swapButton}>
