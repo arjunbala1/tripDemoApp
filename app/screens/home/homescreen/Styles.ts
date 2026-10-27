@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: "row",
-        // alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: colors.appBG,
     },
@@ -18,7 +17,6 @@ const styles = StyleSheet.create({
     searchBox: {
         padding: Constants.APP_PADDING,
     },
-    // Keeps the last rows clear of the absolutely positioned footer button
     listContent: {
         paddingBottom: 100,
     },
